@@ -3,7 +3,7 @@ body {
 }
 
 .card__title,
-.card__price,
+.button,
 .section__title {
   font-family: 'Insaniburger with Cheese', sans-serif;
 }
@@ -83,6 +83,7 @@ body {
   color: var(--primary);
   font-size: 45px;
   line-height: 50px;
+  width: fit-content;
 }
 
 .card__title,
@@ -90,7 +91,6 @@ body {
 .card__price {
   margin-left: auto;
   margin-right: 53px;
-  width: fit-content;
 }
 
 .card__ingredients {
@@ -101,17 +101,20 @@ body {
 }
 
 .card__ingredients,
-.card__price {
+.button--primary {
   color: var(--white);
 }
 
-.card__price {
+.button--primary {
   background-color: var(--primary);
   font-size: 45px;
   line-height: 50px;
   border-radius: 16px;
-  margin-top: 28px;
   padding: 4px 12px;
+}
+
+.card__price {
+  margin-top: 28px;
 }
 
 .drinks {
@@ -200,6 +203,42 @@ body {
 
 .location iframe {
   max-width: calc(100% - 40px);
+  border-radius: 32px;
+}
+
+.footer {
+  background-color: var(--black);
+}
+
+.footer .section__title,
+.footer .section__subtitle {
+  color: var(--white);
+  text-align: left;
+}
+
+.footer .section__title span {
+  color: var(--primary);
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  max-width: 1460px;
+  margin: 0 auto;
+  gap: 32px;
+  padding: 32px 0;
+}
+
+.footer .button--primary {
+  padding: 16px 36px;
+  text-transform: uppercase;
+}
+
+.button {
+  width: fit-content;
+  border: 0;
 }
 
 @media (max-width: 1023px) {
@@ -251,7 +290,7 @@ body {
     line-height: 20px;
   }
 
-  .card__price {
+  .button {
     font-size: 20px;
     line-height: 24px;
   }
@@ -273,5 +312,9 @@ body {
   .location__address {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  .footer__container {
+    flex-direction: column;
   }
 }
